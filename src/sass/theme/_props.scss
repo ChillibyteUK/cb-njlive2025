@@ -1,0 +1,76 @@
+$col-primary: #27383A;
+$col-dark: #222222;
+$col-darkest: #4a4a4a;
+$col-light: #f2f2f2;
+
+:root {
+  /* === Colours === */
+  --hsl-slate: 196 40% 10%; // #0E1F24
+  --hsl-green: 168 99% 41%; // #01D0A5
+  --hsl-blue: 213 100% 42%; // #006AD8
+  --hsl-white: 0 0% 100%; // #FFFFFF
+  --hsl-black: 0 0% 0%; // #000000
+
+  --colour-green--light: #50ffca; // #00ffb2
+  --colour-green--mid: #01D0A5; // #01D0A5;
+  --colour-green--dark: #38B39A; // #38B39A;
+  --colour-green--darkest: #3C8B7A; // #3C8B7A;
+
+  --colour-slate: hsl(var(--hsl-slate));
+  --colour-green: hsl(var(--hsl-green));
+  --colour-blue:  hsl(var(--hsl-blue));
+  --colour-white: hsl(var(--hsl-white));
+  --colour-black: hsl(var(--hsl-black));
+
+  /* === Font Sizes === */
+
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-md: 1.125rem;     /* 18px */
+  --text-lg: 1.25rem;      /* 20px */
+  --text-xl: 1.5rem;       /* 24px */
+  --text-2xl: 2rem;        /* 32px */
+  --text-3xl: 2.5rem;      /* 40px */
+  --text-4xl: 3rem;        /* 48px */
+  --text-5xl: 4rem;        /* 64px */
+  --text-6xl: 6rem;        /* 96px */
+  --text-7xl: 8rem;        /* 128px */
+
+  --text-xs--line-height: 1.5;      /* 18px on 12px */
+  --text-sm--line-height: 1.5;      /* 21px on 14px */
+  --text-base--line-height: 1.5;    /* 24px on 16px */
+  --text-md--line-height: 1.5;      /* 27px on 18px */
+  --text-lg--line-height: 1.5;      /* 30px on 20px */
+  --text-xl--line-height: 1.5;      /* 36px on 24px */
+  --text-2xl--line-height: 1.25;    /* 40px on 32px */
+  --text-3xl--line-height: 1.25;    /* 50px on 40px */
+  --text-4xl--line-height: 1.25;    /* 60px on 48px */
+  --text-5xl--line-height: 1.125;   /* 72px on 64px */
+  --text-6xl--line-height: 1.125;   /* 108px on 96px */
+  --text-7xl--line-height: 1.125;   /* 144px on 128px */
+  
+  /* === Font Weights === */
+  --font-weight-thin:     300;
+  --font-weight-regular:  400;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --font-weight-extrabold: 850;
+  --font-weight-black:    900;
+
+  /* === Font Families === */
+  --ff-body: 'Apparat', Tahoma, Geneva, Verdana, sans-serif;
+  --ff-heading: var(--ff-body);
+
+  /* === Utilities === */
+  --transition: 250ms ease-out;
+
+
+  --border-radius-xl: 3rem;
+  --border-radius-lg: 1.5rem;
+  --border-radius-sm: 0.75rem;
+
+  --h-top: 88px;
+  --h-top-desktop: 130px;
+
+}

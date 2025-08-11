@@ -1,0 +1,86 @@
+header {
+  background-color: var(--colour-slate);
+  transition: var(--transition);
+
+  border-bottom: 3px solid var(--colour-green);
+
+  .navbar-toggler {
+    i {
+      color: var(--colour-green);
+    }
+  }
+
+  a.nav-link {
+    color: var(--colour-white);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-semibold);
+    transition: var(--transition);
+    display: inline-block;
+    padding-block: 1rem;
+    @media (min-width: 992px) {
+      &:hover {
+        color: var(--colour-green);
+      }
+    }
+  }
+
+  .logo-container {
+    max-width: 53px;
+    margin-right: 1rem;
+  }
+  .logo {
+    background-image: url(../img/nj-logo--green.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    aspect-ratio: 53 / 65;
+    width: 53px;
+    height: 65px;
+    max-width: 100%;
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  .social-icons {
+    a {
+      transition: color var(--transition);
+      color: var(--colour-white);
+      &:hover {
+        color: var(--colour-green);
+      }
+    }
+  }
+
+  // Only highlight actual current menu item and ancestor, not parent
+  .current_page_parent > .nav-link,
+  .current-menu-item > .nav-link,
+  .current-page-ancestor > .nav-link,
+  .dropdown.current-menu-item > .nav-link,
+  .dropdown.current-page-ancestor > .nav-link {
+    position: relative;
+    color: var(--colour-green);
+
+    &::after {
+      // Use ::before instead of ::after
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      display: block;
+      background-color: var(--colour-green);
+      bottom: 0px; // Adjust to align properly
+      left: 0px;
+    }
+  }
+
+  // Only override parent highlight for CPT archives, not for posts
+  body[class*="post-type-archive-"] & .current_page_parent > .nav-link {
+    color: var(--colour-white);
+    &::after {
+      background-color: transparent;
+    }
+  }
+}

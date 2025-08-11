@@ -1,0 +1,81 @@
+.services {
+    background-color: var(--colour-slate);
+    color: var(--colour-white);
+    &-hero {
+        height: calc( 100vh - var(--h-top) );
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 2rem;
+        h1 {
+            font-size: var(--text-6xl);
+            line-height: var(--text-6xl--line-height);
+            font-weight: var(--font-weight-black);
+        }
+    }
+
+
+
+    .accordion {
+        // Custom accordion container styles
+        --bs-accordion-bg: transparent;
+        --bs-accordion-active-bg: transparent;
+        --bs-accordion-color: var(--colour-green);
+        --bs-accordion-border-color: transparent;
+        --bs-accordion-btn-padding-y: 0 0.5rem; // these are weird because bootstrap.
+        --bs-accordion-btn-padding-x: 0.5rem 0;
+
+        --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg width='66' height='36' viewBox='0 0 66 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline opacity='1' x1='1.06066' y1='1.93934' x2='34.0607' y2='34.9393' stroke='%2301D0A5' stroke-width='3'/%3E%3Cline opacity='1' x1='31.9393' y1='34.9393' x2='64.9393' y2='1.93934' stroke='%2301D0A5' stroke-width='3'/%3E%3C/svg%3E%0A");
+        --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csvg width='66' height='36' viewBox='0 0 66 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline opacity='1' x1='1.06066' y1='1.93934' x2='34.0607' y2='34.9393' stroke='%2301D0A5' stroke-width='3'/%3E%3Cline opacity='1' x1='31.9393' y1='34.9393' x2='64.9393' y2='1.93934' stroke='%2301D0A5' stroke-width='3'/%3E%3C/svg%3E%0A");
+    }
+
+    .accordion-item {
+        background-color: transparent;
+        margin-bottom: 2rem;
+    }
+    
+    .accordion-button {
+        color: var(--colour-green);
+        font-size: var(--text-4xl);
+        font-weight: var(--font-weight-regular);
+        &:not(.collapsed)::after,
+        &::after {
+            fill: var(--colour-green);
+            width: 48px;
+            height: 26px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        border-bottom: 2px solid var(--colour-green);
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .accordion-collapse {
+        // Collapsible content wrapper
+        color: var(--colour-white)
+    }
+
+    .accordion-body {
+        padding-inline: 0;
+        // Content inside the collapse
+    }
+
+    .service-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        row-gap: 1rem;
+    }
+    .service-highlight {
+        flex-basis: calc( 50% - 2rem );
+        font-size: var(--text-xl);
+        line-height: var(--text-xl--line-height);
+        border-inline-start: 2px solid var(--colour-white);
+        padding-inline-start: 0.5rem;
+        align-self: flex-start;
+    }
+}

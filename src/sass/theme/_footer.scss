@@ -1,0 +1,28 @@
+.footer {
+    background-color: var(--colour-slate);
+    color: var(--colour-green);
+    border-top: 3px solid var(--colour-green);
+
+    font-size: var(--text-sm);
+
+    a {
+        color: var(--colour-green);
+        transition: color var(--transition);
+        &:hover {
+            color: var(--colour-white);
+        }
+    }
+
+    .cb {
+        content: url(../img/cb-mono.png);
+        transition: opacity var(--transition);
+        opacity: 0.2;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .container {
+        border-bottom: 1px solid hsl( var(--hsl-green) / 0.4 );
+    }
+}

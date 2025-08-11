@@ -1,0 +1,48 @@
+.case-study-intro {
+    padding-block: 2rem 4rem;
+    background-color: var(--colour-green);
+    color: var(--colour-slate);
+    &__hero-wrapper {
+        aspect-ratio: 4 / 5;
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: var(--border-radius-lg);
+    }
+
+    &__hero {
+        aspect-ratio: 4 / 5;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--border-radius-lg);
+    }
+
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    &__category {
+        font-size: var(--text-sm);
+        font-weight: var(--font-weight-regular);
+        line-height: 1;
+        color: var(--colour-slate);
+        padding: .5rem .75rem .4rem .75rem;
+        border: 1px solid var(--colour-slate);
+        border-radius: 100vw;
+        align-self: flex-start;
+        min-width: 60px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__title {
+        font-size: var(--text-5xl);
+        font-weight: var(--font-weight-black);
+        line-height: var(--text-5xl--line-height);
+        text-wrap: balance;
+        margin-bottom: 1rem;
+    }
+}

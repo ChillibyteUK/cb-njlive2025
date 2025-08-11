@@ -1,0 +1,49 @@
+.team-slider {
+    &__title {
+        display: inline-block;
+        background-color: var(--colour-green);
+        padding: 0.5rem 1rem;
+        font-weight: var(--font-weight-black);
+        font-size: var(--text-4xl);
+        color: var(--colour-slate);
+        border-radius: var(--border-radius-lg);
+        margin-bottom: 2rem;
+    }
+
+    &__card {
+        display: block;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        background: radial-gradient(circle at 10% 90%, #00b589 0%, #003b42 80%);
+        border-radius: var(--border-radius-lg);
+        border-bottom-right-radius: 8rem;
+        overflow: hidden;
+        position: relative;
+    }
+    &__image {
+        position: absolute;
+        bottom: 0;
+        right: 2rem;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+
+    &__detail {
+        position: absolute;
+        top: 6rem;
+        left: 2rem;
+        max-width: 15ch;
+        font-size: var(--text-lg);
+    }
+    &__name {
+        font-size: var(--text-lg);
+        font-weight: var(--font-weight-bold);
+        color: var(--colour-white);
+    }
+    &__role {
+        font-weight: var(--font-weight-thin);
+        color: var(--colour-green);
+        margin-bottom: 0.5rem;  
+    }
+}
