@@ -15,8 +15,8 @@ defined( 'ABSPATH' ) || exit;
 			<?php
 			while ( have_rows( 'stat_spinner' ) ) {
 				the_row();
-				$stat  = get_sub_field( 'stat' );
-				$label = get_sub_field( 'label' );
+				$stat     = get_sub_field( 'stat' );
+				$label    = get_sub_field( 'label' );
 				$prelabel = get_sub_field( 'prelabel' );
 				?>
 				<div class="col-lg-4 stat-spinner__item pt-4">

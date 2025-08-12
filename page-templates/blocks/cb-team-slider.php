@@ -41,6 +41,8 @@ defined( 'ABSPATH' ) || exit;
 		  			?>
 				</div>
 			</div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
 		</div>
 	</div>
 </section>
@@ -64,6 +66,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			576: {
 			slidesPerView: 1.25,
 			}
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
 		}
 	});
 });

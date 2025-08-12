@@ -58,5 +58,33 @@
     width: auto;
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    color: var(--colour-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    &::after {
+      font-size: 32px;
+      opacity: 0.4 !important;
     }
+    &:hover::after {
+      opacity: 1 !important;
+    }
+  }
+  .swiper-button-prev {
+    left: calc((100vw - 100%) / 2 + 1rem); // aligns with container's left edge
+    margin-left: 0;
+  }
+
 }
