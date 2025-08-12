@@ -22639,13 +22639,17 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
   line-height: var(--text-4xl--line-height);
 }
 .stat-spinner__item {
-  display: grid;
-  grid-template-rows: 2rem 1fr 2rem;
   justify-items: center;
   gap: 0.5rem;
   border-block-start: 3px solid white;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+  .stat-spinner__item {
+    display: grid;
+    grid-template-rows: 3.5rem 1fr 2.5rem;
+  }
+}
+@media (min-width: 992px) {
   .stat-spinner__item {
     border-block-start: none;
   }
@@ -22655,10 +22659,21 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
 }
 .stat-spinner__stat {
   font-size: var(--text-6xl);
+  text-align: center;
   font-weight: var(--font-weight-black);
   line-height: 1;
   display: flex;
   justify-content: center;
+}
+@media (min-width: 992px) {
+  .stat-spinner__stat {
+    font-size: var(--text-5xl);
+  }
+}
+@media (min-width: 1200px) {
+  .stat-spinner__stat {
+    font-size: var(--text-6xl);
+  }
 }
 .stat-spinner__label {
   text-align: center;

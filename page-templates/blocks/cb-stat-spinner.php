@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 <section class="stat-spinner">
 	<h2 class="text-center">Impact</h2>
 	<div class="container">
-		<div class="row justify-content-center">
+		<div class="row gy-4 justify-content-center">
 			<?php
 			while ( have_rows( 'stat_spinner' ) ) {
 				the_row();
@@ -19,8 +19,8 @@ defined( 'ABSPATH' ) || exit;
 				$label = get_sub_field( 'label' );
 				$prelabel = get_sub_field( 'prelabel' );
 				?>
-				<div class="col-md-6 col-lg-4 stat-spinner__item">
-					<span class="stat-spinner__label"><?= esc_html( $prelabel ); ?></span>
+				<div class="col-lg-4 stat-spinner__item pt-4">
+					<div class="stat-spinner__label"><?= esc_html( $prelabel ); ?></div>
 					<div class="stat-spinner__stat">
 						<?php
 						if ( get_sub_field( 'prefix' ) ) {
@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
 						}
 						?>
 					</div>
-					<span class="stat-spinner__label"><?= esc_html( $label ); ?></span>
+					<div class="stat-spinner__label"><?= esc_html( $label ); ?></div>
 				</div>
 				<?php
 			}

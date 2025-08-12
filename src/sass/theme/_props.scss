@@ -36,7 +36,7 @@ $col-light: #f2f2f2;
   --text-5xl: clamp(2.5rem, 1.8rem + 7vw, 6rem);              /* 40px - 96px, shrinks more */
   --text-6xl: clamp(3rem, 2.2rem + 10vw, 8rem);               /* 48px - 128px, shrinks more */
   --text-7xl: clamp(2rem, 1.5rem + 4vw, 10rem);               /* 32px - 160px, much less aggressive scaling */
-
+  
   --text-xs--line-height: 1.5;      /* 18px on 12px */
   --text-sm--line-height: 1.5;      /* 21px on 14px */
   --text-base--line-height: 1.5;    /* 24px on 16px */
