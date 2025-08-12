@@ -319,20 +319,25 @@ add_action(
 	}
 );
 
-add_filter('nav_menu_css_class', function($classes, $item) {
-    // Adjust for single casestudy post type
-    if (is_singular('casestudy')) {
-        // Replace 'work' with the actual slug or ID of your Work menu item
-        if ($item->url && strpos($item->url, '/work') !== false) {
-            $classes[] = 'current-menu-item';
-        }
-        // Optionally, remove highlight from Insights/blog parent
-        if ($item->url && strpos($item->url, '/insights') !== false) {
-            $classes = array_diff($classes, ['current-menu-item', 'current_page_parent']);
-        }
-    }
-    return $classes;
-}, 10, 2);
+add_filter(
+	'nav_menu_css_class',
+	function ( $classes, $item ) {
+		// Adjust for single casestudy post type.
+		if ( is_singular( 'casestudy' ) ) {
+			// Replace 'work' with the actual slug or ID of your Work menu item.
+			if ( $item->url && strpos( $item->url, '/work' ) !== false ) {
+				$classes[] = 'current-menu-item';
+			}
+			// Optionally, remove highlight from Insights/blog parent.
+			if ( $item->url && strpos( $item->url, '/insights' ) !== false ) {
+				$classes = array_diff( $classes, ['current-menu-item', 'current_page_parent'] );
+			}
+		}
+		return $classes;
+	},
+	10,
+	2
+);
 
 // phpcs:disable
 // function add_custom_menu_item($items, $args)

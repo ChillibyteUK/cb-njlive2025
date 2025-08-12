@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 <main id="main" class="single-blog">
-	<div class="container">
+	<div class="container py-5">
 		<?php
 		$post_cat = get_the_category();
 		?>
@@ -18,7 +18,7 @@ get_header();
 		</div>
 		<div class="row">
 			<div class="col-lg-7 order-lg-2 my-auto">
-				<div class="post_hero">
+				<div class="post_hero mb-4">
 					<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'single-blog__image' ) ); ?>
 				</div>
 			</div>

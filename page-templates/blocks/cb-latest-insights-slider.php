@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 								?>
 							</div>
 				  			<h3 class="latest-insights-slider__title"><?php the_title(); ?></h3>
-							<div class="latest-insights-slider__excerpt"><?php the_excerpt(); ?></div>
+							<div class="latest-insights-slider__excerpt d-none d-md-block"><?php the_excerpt(); ?></div>
 						</a>
 			  		</div>
 			  				<?php
@@ -53,7 +53,7 @@ defined( 'ABSPATH' ) || exit;
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 	new Swiper('.latest-insights-slider__swiper', {
-		slidesPerView: 2.5,
+		slidesPerView: 1.25,
 		spaceBetween: 24, // adjust as needed
 		loop: true,
 		autoplay: {
