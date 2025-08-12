@@ -27,6 +27,7 @@
         height: 100%;
         width: auto;
         object-fit: contain;
+        max-height: 100%;
     }
 
     &__detail {
@@ -38,11 +39,14 @@
     }
     &__name {
         font-size: var(--text-lg);
+        line-height: var(--text-lg--line-height);
         font-weight: var(--font-weight-bold);
         color: var(--colour-white);
     }
     &__role {
         font-weight: var(--font-weight-thin);
+        font-size: var(--text-base);
+        line-height: var(--text-base--line-height);
         color: var(--colour-green);
         margin-bottom: 0.5rem;  
     }

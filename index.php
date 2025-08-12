@@ -51,7 +51,7 @@ get_header();
 						<?= esc_html( $c->name ); ?>
 					</div>
 				</div>
-				<div id="category-<?= esc_attr( $c->slug ); ?>" class="latest-posts__content collapse" data-bs-parent="#latest-posts">
+				<div id="category-<?= esc_attr( $c->slug ); ?>" class="latest-posts__content collapse mt-3" data-bs-parent="#latest-posts">
 					<div class="swiper latest-posts__swiper" style="width:100%;">
 						<div class="swiper-wrapper">
 							<?php

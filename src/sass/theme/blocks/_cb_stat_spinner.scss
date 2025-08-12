@@ -15,8 +15,12 @@
         grid-template-rows: 2rem 1fr 2rem;
         justify-items: center;
         gap: 0.5rem;
-        &:not(:last-child) {
-            border-inline-end: 3px solid white;
+        border-block-start: 3px solid white;
+        @media (min-width:768px) {
+            border-block-start: none;
+            &:not(:last-child) {
+                border-inline-end: 3px solid white;
+            }
         }
 	}
 

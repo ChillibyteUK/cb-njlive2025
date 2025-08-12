@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container h-100">
 		<div class="row h-100 g-5">
 			<div class="col-md-5">
-				<div class="case-study-intro__hero-wrapper">
+				<div class="case-study-intro__hero-wrapper mb-3">
 					<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'case-study-intro__hero' ) ); ?>
 				</div>
 			</div>

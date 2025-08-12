@@ -32,7 +32,7 @@ defined( 'ABSPATH' ) || exit;
 document.addEventListener('DOMContentLoaded', function () {
 	const lightbox = GLightbox({});
 	new Swiper('.case-study-image-slider__swiper', {
-		slidesPerView: 3,
+		slidesPerView: 1,
 		spaceBetween: 24, // adjust as needed
 		loop: true,
 		autoplay: {
@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			slidesPerView: 3,
 			},
 			992: {
-			slidesPerView: 2,
+			slidesPerView: 3,
 			},
 			768: {
-			slidesPerView: 1,
+			slidesPerView: 2,
 			},
 			576: {
 			slidesPerView: 1,

@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 				$label = get_sub_field( 'label' );
 				$prelabel = get_sub_field( 'prelabel' );
 				?>
-				<div class="col-6 col-md-4 col-lg-3 stat-spinner__item">
+				<div class="col-md-6 col-lg-4 stat-spinner__item">
 					<span class="stat-spinner__label"><?= esc_html( $prelabel ); ?></span>
 					<div class="stat-spinner__stat">
 						<?php

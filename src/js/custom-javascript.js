@@ -48,7 +48,7 @@ AOS.init({
       }
   };
 
-  window.addEventListener('scroll', checkScroll);
+//   window.addEventListener('scroll', checkScroll);
 }
 )();
 

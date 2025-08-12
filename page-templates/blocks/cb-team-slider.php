@@ -47,7 +47,7 @@ defined( 'ABSPATH' ) || exit;
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 	new Swiper('.team-slider__swiper', {
-		slidesPerView: 3.5,
+		slidesPerView: 1.25,
 		spaceBetween: 24, // adjust as needed
 		loop: true,
 		autoplay: false,
