@@ -172,6 +172,23 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
+                'name'            => 'cb_latest_casestudy_slider',
+                'title'           => __( 'CB Latest Case Study Slider' ),
+                'category'        => 'layout',
+                'icon'            => 'cover-image',
+                'render_template' => 'page-templates/blocks/cb-latest-casestudy-slider.php',
+                'mode'            => 'edit',
+                'supports'        => array(
+                    'mode'      => false,
+                    'anchor'    => true,
+                    'className' => true,
+                    'align'     => true,
+                ),
+            )
+        );
+
+        acf_register_block_type(
+            array(
                 'name'            => 'cb_homepage_cards',
                 'title'           => __( 'CB Homepage Cards' ),
                 'category'        => 'layout',
