@@ -63,17 +63,17 @@ header {
     position: relative;
     color: var(--colour-green);
 
-    &::after {
-      // Use ::before instead of ::after
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      display: block;
-      background-color: var(--colour-green);
-      bottom: 0px; // Adjust to align properly
-      left: 0px;
-    }
+    // &::after {
+    //   // Use ::before instead of ::after
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 2px;
+    //   display: block;
+    //   background-color: var(--colour-green);
+    //   bottom: 0px; // Adjust to align properly
+    //   left: 0px;
+    // }
   }
 
   // Only override parent highlight for CPT archives, not for posts
