@@ -22674,7 +22674,7 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
 @media (min-width: 992px) {
   .stat-spinner__item {
     display: grid;
-    grid-template-rows: 3.5rem 1fr 2.5rem;
+    grid-template-rows: 3.5rem auto auto;
   }
 }
 @media (min-width: 992px) {
@@ -22699,6 +22699,9 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
   .stat-spinner__stat {
     font-size: var(--text-6xl);
   }
+}
+.stat-spinner__value.numeric-value {
+  margin-bottom: -0.8em;
 }
 .stat-spinner__label {
   text-align: center;

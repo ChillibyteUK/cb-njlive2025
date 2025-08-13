@@ -13,34 +13,44 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container">
 		<div class="row gy-4 justify-content-center">
 			<?php
+
 			while ( have_rows( 'stat_spinner' ) ) {
 				the_row();
-				$stat     = get_sub_field( 'stat' );
-				$label    = get_sub_field( 'label' );
-				$prelabel = get_sub_field( 'prelabel' );
-				?>
-				<div class="col-lg-4 stat-spinner__item pt-4">
-					<div class="stat-spinner__label"><?= esc_html( $prelabel ); ?></div>
-					<div class="stat-spinner__stat">
-						<?php
-						if ( get_sub_field( 'prefix' ) ) {
-							?>
-						<span class="stat-spinner__prefix"><?= esc_html( get_sub_field( 'prefix' ) ); ?></span>
-							<?php
-						}
-						?>
-						<span class="stat-spinner__value"><?= esc_html( $stat ); ?></span>
-						<?php
-						if ( get_sub_field( 'suffix' ) ) {
-							?>
-						<span class="stat-spinner__suffix"><?= esc_html( get_sub_field( 'suffix' ) ); ?></span>
-							<?php
-						}
-						?>
+				$layout = get_row_layout();
+				if ( $layout === 'numeric' ) {
+					$prelabel = get_sub_field( 'pre_label' );
+					$stat     = get_sub_field( 'stat' );
+					$label    = get_sub_field( 'label' );
+					?>
+					<div class="col-lg-4 stat-spinner__item pt-4">
+						<div class="stat-spinner__label"><?= esc_html( $prelabel ); ?></div>
+						<div class="stat-spinner__stat">
+							<?php if ( get_sub_field( 'prefix' ) ) { ?>
+								<span class="stat-spinner__prefix"><?= esc_html( get_sub_field( 'prefix' ) ); ?></span>
+							<?php } ?>
+							<span class="stat-spinner__value numeric-value"><?= esc_html( $stat ); ?></span>
+							<?php if ( get_sub_field( 'suffix' ) ) { ?>
+								<span class="stat-spinner__suffix"><?= esc_html( get_sub_field( 'suffix' ) ); ?></span>
+							<?php } ?>
+						</div>
+						<div class="stat-spinner__label"><?= esc_html( $label ); ?></div>
 					</div>
-					<div class="stat-spinner__label"><?= esc_html( $label ); ?></div>
-				</div>
-				<?php
+					<?php
+				} elseif ( $layout === 'text' ) {
+					$prelabel = get_sub_field( 'pre_label' );
+					$stat     = get_sub_field( 'stat' );
+					$label    = get_sub_field( 'label' );
+
+					?>
+					<div class="col-lg-4 stat-spinner__item pt-4">
+						<div class="stat-spinner__label"><?= esc_html( $prelabel ); ?></div>
+						<div class="stat-spinner__stat">
+							<span class="stat-spinner__value text-value"><?= esc_html( $stat ); ?></span>
+						</div>
+						<div class="stat-spinner__label"><?= esc_html( $label ); ?></div>
+					</div>
+					<?php
+				}
 			}
 			?>
 		</div>
@@ -62,8 +72,9 @@ add_action(
 					if (hasAnimated) return;
 					hasAnimated = true;
 
-					document.querySelectorAll('.stat-spinner__value').forEach(function (el) {
-						const value = parseInt(el.textContent, 10);
+					document.querySelectorAll('.stat-spinner__value.numeric-value').forEach(function (el) {
+						const value = parseInt(el.textContent.replace(/,/g, ''), 10);
+						if (isNaN(value)) return;
 						let current = 0;
 						const increment = Math.ceil(value / 100);
 
