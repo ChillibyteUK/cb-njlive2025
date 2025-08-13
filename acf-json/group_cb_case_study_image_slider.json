@@ -21,7 +21,7 @@
             "new_lines": "wpautop"
         },
         {
-            "key": "field_6896180f57800",
+            "key": "field_689cb1671045a",
             "label": "Images",
             "name": "images",
             "aria-label": "",
@@ -46,7 +46,7 @@
             "max_size": "",
             "mime_types": "",
             "insert": "append",
-            "preview_size": "medium"
+            "preview_size": "thumbnail"
         }
     ],
     "location": [
@@ -67,5 +67,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1754667035
+    "modified": 1755099517
 }
