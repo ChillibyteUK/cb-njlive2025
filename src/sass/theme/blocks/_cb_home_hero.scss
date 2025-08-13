@@ -1,0 +1,34 @@
+.cb-homepage-hero {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh; // Ensures sticky works and content scrolls over hero
+  z-index: 1;
+  overflow: visible;
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    display: block;
+  }
+
+&__image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  border-bottom: 3px solid var(--colour-green);
+
+}

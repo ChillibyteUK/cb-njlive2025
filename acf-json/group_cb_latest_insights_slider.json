@@ -1,0 +1,23 @@
+{
+  "key": "group_cb_latest_insights_slider",
+  "title": "CB Latest Insights Slider",
+  "fields": [
+    {
+      "key": "field_cb_latest_insights_slider_title",
+      "label": "CB Latest Insights Slider",
+      "name": "title",
+      "type": "message"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/cb-latest-insights-slider"
+      }
+    ]
+  ],
+  "active": 1,
+  "description": ""
+}

@@ -1,0 +1,198 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Apparat';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/Apparat_Heavy_900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Apparat';
+  font-style: normal;
+  font-weight: 850;
+  src: url('../fonts/Apparat_Black_850.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Apparat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Apparat_Bold_700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Apparat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Apparat_Semibold_600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Apparat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Apparat_Regular_400.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Apparat';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Apparat_Light_300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+:root {
+    font-variant-ligatures: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-weight: var(--fw-400);
+    font-size: var(--text-base);
+    line-height: 1.556;
+    font-style: normal;
+    color: var(--col-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.text-xs {
+  font-size: var(--text-xs);
+  line-height: var(--text-xs--line-height);
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: var(--text-sm--line-height);
+}
+
+.text-base {
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+}
+
+.text-md {
+  font-size: var(--text-md);
+  line-height: var(--text-md--line-height);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: var(--text-lg--line-height);
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: var(--text-xl--line-height);
+}
+
+.text-2xl {
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+}
+
+.text-3xl {
+  font-size: var(--text-3xl);
+  line-height: var(--text-3xl--line-height);
+}
+
+.text-4xl {
+  font-size: var(--text-4xl);
+  line-height: var(--text-4xl--line-height);
+}
+
+.text-5xl {
+  font-size: var(--text-5xl);
+  line-height: var(--text-5xl--line-height);
+}
+
+.text-6xl {
+  font-size: var(--text-6xl);
+  line-height: var(--text-6xl--line-height);
+}
+
+.text-7xl {
+  font-size: var(--text-7xl);
+  line-height: var(--text-7xl--line-height);
+}
+
+.fw-thin {
+    font-weight: var(--font-weight-thin);
+}
+.fw-regular,
+.fw-400 {
+    font-weight: var(--font-weight-regular);
+}
+.lh-regular {
+    line-height: 1;
+}
+.fw-semibold,
+.fw-600 {
+    font-weight: var(--font-weight-semibold);
+}
+.fw-bold,
+.fw-700 {
+    font-weight: var(--font-weight-bold);
+}
+.fw-extrabold,
+.fw-850 {     
+    font-weight: var(--font-weight-extrabold);
+}
+.fw-black,
+.fw-900 {
+    font-weight: var(--font-weight-black);
+}
+
+.fs-500,
+.has-medium-font-size {
+    font-size: var(--text-lg);
+}
+.fs-300,
+.has-small-font-size {
+    font-size: var(--text-sm);
+}
+
+.text-balance {
+    text-wrap: balance;
+}
+
+.w-constrained--sm {
+    max-width: 65ch;
+}
+.w-constrained--lg {
+    max-width: 92ch;
+}
+
+// p:not([class]) {
+//     max-width: 70ch;
+// }
+
+.ff-body {
+    font-family: var(--ff-body);
+}
+
+.lead-in {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-500);
+    line-height: 1.4;
+}
+
+.fancy {
+    position: relative;
+    padding-left: 4.5rem;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0.25em;
+        width: 3.75rem;
+        height: 1.25rem;
+        background-color: var(--col-accent-500);
+        display: block;
+    }
+}
