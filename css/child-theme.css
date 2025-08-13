@@ -22700,9 +22700,6 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
     font-size: var(--text-6xl);
   }
 }
-.stat-spinner__value.numeric-value {
-  margin-bottom: -0.8em;
-}
 .stat-spinner__label {
   text-align: center;
   font-weight: var(--font-weight-bold);
