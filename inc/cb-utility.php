@@ -151,12 +151,12 @@ add_shortcode(
  * Grab the specified data like Thumbnail URL of a publicly embeddable video hosted on Vimeo.
  *
  * @param  str $video_id The ID of a Vimeo video.
- * @param  str $data      Video data to be fetched.
+ * @param  str $data      Video data to be fetched - probably want thumbnail_url or thumbnail_url_with_play_button
  * @return str            The specified data
  */
 function get_vimeo_data_from_id( $video_id, $data ) {
     // Width can be 100, 200, 295, 640, 960 or 1280.
-    $request = wp_remote_get( 'https://vimeo.com/api/oembed.json?url=https://vimeo.com/' . $video_id . '&width=960' );
+    $request = wp_remote_get( 'https://vimeo.com/api/oembed.json?url=https://vimeo.com/' . $video_id . '&width=1280' );
 
     $response = wp_remote_retrieve_body( $request );
 

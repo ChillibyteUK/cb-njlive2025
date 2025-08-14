@@ -16,21 +16,21 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Supports one or more images or a video. Images take precedence.",
+            "message": "Supports one or more images or a Vimeo video ID. Images take precedence.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
         {
             "key": "field_686e449c8b3af",
-            "label": "Video URL (MP4)",
-            "name": "video_url",
+            "label": "Vimeo Video ID",
+            "name": "vimeo_id",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -40,32 +40,6 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_68554f502a77e",
-            "label": "Video Poster",
-            "name": "video_poster",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "thumbnail"
         },
         {
             "key": "field_688b9023a558a",
@@ -114,5 +88,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1754404920
+    "modified": 1755160827
 }

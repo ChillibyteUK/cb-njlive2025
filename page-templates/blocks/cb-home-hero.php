@@ -7,10 +7,10 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
+
 <div class="cb-homepage-hero">
 	<div class="cb-homepage-hero__image-wrapper">
 		<?php
-		// images take precedence over video.
 		$images = get_field( 'images' );
 		if ( $images && is_array( $images ) && count( $images ) > 0 ) {
 			?>
@@ -31,29 +31,19 @@ defined( 'ABSPATH' ) || exit;
 			</section>
 			<?php
 		} else {
-			$video_url = get_field( 'video_url' );
-			if ( $video_url ) {
-				$poster = get_field( 'video_poster' );
+			$vimeo_id = get_field( 'vimeo_id' );
+			if ( $vimeo_id ) {
+				$bg_image_url = get_vimeo_data_from_id( $vimeo_id, 'thumbnail_url' );
 				?>
-				<section class="video_hero">
-					<div class="ratio ratio-16x9">
-						<picture>
-							<source srcset="<?= esc_attr( wp_get_attachment_image_srcset( $poster, 'full' ) ); ?>" type="image/jpeg">
-							<img 
-								src="<?= esc_url( wp_get_attachment_url( $poster ) ); ?>" 
-								alt="Poster image"
-							>
-						</picture>
-						<video class="absolute inset-0 h-full w-full" autoplay="" loop="" muted="" playsinline="" x-ref="video">
-							<source src="<?= esc_url( $video_url ); ?>" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
-				</section>
+			<section class="video_hero">
+				<div class="cb-homepage-hero__image-wrapper">
+					<img src="<?= esc_url( $bg_image_url ); ?>" alt="" class="cb-homepage-hero__image">
+				</div>
+				<div class="vimeo-container">
+					<iframe src="https://player.vimeo.com/video/<?= esc_attr( $vimeo_id ); ?>?api=1&background=1&autoplay=1&loop=1" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+				</div>
+			</section>
 				<?php
-			} else {
-				$bg_image = get_field( 'video_poster' );
-				echo wp_get_attachment_image( $bg_image, 'full', false, array( 'class' => 'cb-homepage-hero__image' ) );
 			}
 		}
 		?>
