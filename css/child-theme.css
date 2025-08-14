@@ -21818,6 +21818,9 @@ header a.nav-link {
   display: inline-block;
   padding-block: 1rem;
 }
+header a.nav-link:focus {
+  color: var(--colour-green);
+}
 @media (min-width: 992px) {
   header a.nav-link:hover {
     color: var(--colour-green);

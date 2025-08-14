@@ -17,6 +17,9 @@ header {
     transition: var(--transition);
     display: inline-block;
     padding-block: 1rem;
+    &:focus {
+      color: var(--colour-green);
+    }
     @media (min-width: 992px) {
       &:hover {
         color: var(--colour-green);
