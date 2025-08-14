@@ -25,6 +25,11 @@ the_post();
 				$service_title       = get_sub_field( 'service_title' );
 				$service_description = get_sub_field( 'service_description' );
 				$collapse_id         = 'service-' . esc_attr( sanitize_title( $service_title ) );
+				if ( have_rows( 'service_highlights' ) ) {
+					$left_col = 'col-lg-6';
+				} else {
+					$left_col = 'col-lg-8';
+				}
 				?>
 				<div class="accordion-item">
 			   		<h2 class="accordion-header" id="heading-<?= esc_attr( $collapse_id ); ?>">
@@ -35,9 +40,12 @@ the_post();
 			   		<div id="<?= esc_attr( $collapse_id ); ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?= esc_attr( $collapse_id ); ?>" data-bs-parent="#services-list">
 				  		<div class="accordion-body">
 					 		<div class="row">
-								<div class="col-lg-6 text-lg">
+								<div class="<?= esc_attr( $left_col ); ?> text-lg">
 						   			<p><?= wp_kses_post( $service_description ); ?></p>
 								</div>
+								<?php
+								if ( have_rows( 'service_highlights' ) ) {
+									?>
 								<div class="col-lg-5 offset-lg-1 service-highlights py-4 px-lg-0">
 									<?php
 									while ( have_rows( 'service_highlights' ) ) {
@@ -49,6 +57,9 @@ the_post();
 									}
 									?>
 								</div>
+									<?php
+								}
+								?>
 					 		</div>
 				  		</div>
 			   		</div>
