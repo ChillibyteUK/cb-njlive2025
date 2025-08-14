@@ -1,0 +1,30 @@
+.contact {
+    background-color: var(--colour-slate);
+    color: var(--colour-white);
+    height: calc( 100vh - var(--h-top));
+    h1 {
+        font-size: var(--text-5xl);
+        font-weight: var(--font-weight-black);
+    }
+    .row {
+        height: calc( 100vh - var(--h-top));
+    }
+    li {
+        padding-block: 3rem;
+        font-size: var(--text-lg);
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+            text-decoration: none;
+            color: var(--colour-white);
+            transition: color var(--transition);
+            display: inline-block;
+            margin-inline-start: 1rem;
+            &:hover {
+                color: var(--colour-green);
+            }
+        }
+    }
+}
