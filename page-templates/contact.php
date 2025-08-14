@@ -15,10 +15,10 @@ $socials = get_field( 'social', 'option' );
 	<section class="contact-list pb-5">
 		<div class="container pb-5">
 			<div class="row">
-				<div class="col-lg-6 my-auto">
+				<div class="col-lg-6 py-lg-5 my-auto">
 					<h1>Contact us</h1>
 				</div>
-				<div class="col-lg-6 my-auto">
+				<div class="col-lg-6 pb-4 py-lg-5 my-auto">
 					<ul class="fa-ul">
 						<?php
 						if ( $socials['instagram_url'] ) {

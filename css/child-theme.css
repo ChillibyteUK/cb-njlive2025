@@ -22244,7 +22244,7 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
 .contact {
   background-color: var(--colour-slate);
   color: var(--colour-white);
-  height: calc(100vh - var(--h-top));
+  min-height: calc(100vh - var(--h-top));
 }
 .contact h1, .contact .h1 {
   font-size: var(--text-5xl);
@@ -22254,11 +22254,17 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
   height: calc(100vh - var(--h-top));
 }
 .contact li {
-  padding-block: 3rem;
-  font-size: var(--text-lg);
+  padding-block: 1.5rem;
+  font-size: var(--text-md);
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+@media (min-width: 992px) {
+  .contact li {
+    padding-block: 3rem;
+    font-size: var(--text-lg);
+  }
 }
 .contact li a {
   text-decoration: none;

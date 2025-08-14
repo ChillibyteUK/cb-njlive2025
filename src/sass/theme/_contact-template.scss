@@ -1,7 +1,7 @@
 .contact {
     background-color: var(--colour-slate);
     color: var(--colour-white);
-    height: calc( 100vh - var(--h-top));
+    min-height: calc( 100vh - var(--h-top));
     h1 {
         font-size: var(--text-5xl);
         font-weight: var(--font-weight-black);
@@ -10,8 +10,12 @@
         height: calc( 100vh - var(--h-top));
     }
     li {
-        padding-block: 3rem;
-        font-size: var(--text-lg);
+        padding-block: 1.5rem;
+        font-size: var(--text-md);
+        @media (min-width:992px) {
+            padding-block: 3rem;
+            font-size: var(--text-lg);
+        }
         display: flex;
         align-items: center;
         gap: 2rem;
