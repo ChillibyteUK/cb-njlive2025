@@ -35,14 +35,10 @@ defined( 'ABSPATH' ) || exit;
 			if ( $vimeo_id ) {
 				$bg_image_url = get_vimeo_data_from_id( $vimeo_id, 'thumbnail_url' );
 				?>
-			<section class="video_hero">
-				<div class="cb-homepage-hero__image-wrapper">
-					<img src="<?= esc_url( $bg_image_url ); ?>" alt="" class="cb-homepage-hero__image">
-				</div>
-				<div class="vimeo-container">
-					<iframe src="https://player.vimeo.com/video/<?= esc_attr( $vimeo_id ); ?>?api=1&background=1&autoplay=1&loop=1" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-				</div>
-			</section>
+		<img src="<?= esc_url( $bg_image_url ); ?>" alt="" class="cb-homepage-hero__image">
+		<div class="vimeo-container">
+			<iframe src="https://player.vimeo.com/video/<?= esc_attr( $vimeo_id ); ?>?api=1&background=1&autoplay=1&loop=1" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+		</div>
 				<?php
 			}
 		}

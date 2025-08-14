@@ -22265,6 +22265,7 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
   height: 100%;
 }
 .cb-homepage-hero__image {
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 0;
