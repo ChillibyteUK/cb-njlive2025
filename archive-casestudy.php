@@ -28,6 +28,8 @@ get_header();
 		</div>
 	</section>
 	<section class="latest-casestudies py-5">
+		<?php
+		/*
 		<div class="container">
 			<h2 class="text-center max-md-ch mb-4">Select the service that you are interested in to see the most relevant case studies</h2>
 			<?php
@@ -55,10 +57,12 @@ get_header();
 					</div>
 				</div>
 			</div>
+		</div>
+		*/
+		?>
+		<div class="container">
 			<div class="row position-relative g-4">
 				<?php
-			}
-
 			$q = new WP_Query(
 				array(
 					'post_type'      => 'casestudy',
