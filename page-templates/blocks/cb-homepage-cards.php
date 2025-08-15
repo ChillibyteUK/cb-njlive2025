@@ -41,11 +41,13 @@ defined( 'ABSPATH' ) || exit;
 						<div class="homepage-cards__card-inner">
 							<p class="homepage-cards__card-text"><?= esc_html( get_sub_field( 'content' ) ); ?></p>
 							<?php
+							/*
 							if ( is_array( $card_link ) && ! empty( $card_link['url'] ) && ! empty( $card_link['title'] ) ) {
 								?>
 								<div class="homepage-cards__link"><?= esc_html( $card_link['title'] ); ?></div>
 								<?php
 							}
+							*/
 							?>
 						</div>
 					</div>

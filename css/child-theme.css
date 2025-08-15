@@ -22392,7 +22392,8 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
   background: var(--colour-green);
   color: var(--colour-white);
   display: inline-block;
-  padding: 0.25em 0.75em;
+  padding: 0.15em 0.5em 0.05em 0.5em;
+  margin-bottom: 1rem;
   border-radius: var(--border-radius-sm);
   font-size: var(--text-xl);
   font-weight: var(--font-weight-bold);
