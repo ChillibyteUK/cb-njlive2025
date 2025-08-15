@@ -53,6 +53,69 @@ defined( 'ABSPATH' ) || exit;
 			  		</div>
 			  				<?php
 						}
+						// Remove the next two iterations once they have sufficient case studies to fill the slider.
+						while ( $q->have_posts() ) {
+			  				$q->the_post();
+							?>
+			  		<div class="swiper-slide latest-insights-slider__item">
+						<a href="<?php the_permalink(); ?>" class="latest-insights-slider__link">
+							<div class="latest-insights-slider__image-wrapper">
+								<?php
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'large', array( 'class' => 'latest-insights-slider__image' ) );
+								} else {
+									echo '<img src="' . esc_url( get_stylesheet_directory_uri() . '/img/default-thumbnail.jpg' ) . '" alt="" class="latest-insights-slider__image">';
+								}
+								?>
+							</div>
+							<?php
+							if ( get_field( 'card_title', get_the_ID() ) ) {
+								?>
+				  			<h3 class="latest-insights-slider__title"><?= esc_html( get_field( 'card_title', get_the_ID() ) ); ?></h3>
+							<div class="fw-semibold lh-regular"><?=get_field( 'card_subtitle_1', get_the_ID() ) ? esc_html( get_field( 'card_subtitle_1', get_the_ID() ) ) : ''; ?></div>
+							<div class="fw-semibold"><?=get_field( 'card_subtitle_2', get_the_ID() ) ? esc_html( get_field( 'card_subtitle_2', get_the_ID() ) ) : ''; ?></div>
+								<?php
+							} else {
+								?>
+				  			<h3 class="latest-insights-slider__title"><?php the_title(); ?></h3>
+								<?php
+							}
+							?>
+						</a>
+			  		</div>
+			  				<?php
+						}
+						while ( $q->have_posts() ) {
+			  				$q->the_post();
+							?>
+			  		<div class="swiper-slide latest-insights-slider__item">
+						<a href="<?php the_permalink(); ?>" class="latest-insights-slider__link">
+							<div class="latest-insights-slider__image-wrapper">
+								<?php
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'large', array( 'class' => 'latest-insights-slider__image' ) );
+								} else {
+									echo '<img src="' . esc_url( get_stylesheet_directory_uri() . '/img/default-thumbnail.jpg' ) . '" alt="" class="latest-insights-slider__image">';
+								}
+								?>
+							</div>
+							<?php
+							if ( get_field( 'card_title', get_the_ID() ) ) {
+								?>
+				  			<h3 class="latest-insights-slider__title"><?= esc_html( get_field( 'card_title', get_the_ID() ) ); ?></h3>
+							<div class="fw-semibold lh-regular"><?=get_field( 'card_subtitle_1', get_the_ID() ) ? esc_html( get_field( 'card_subtitle_1', get_the_ID() ) ) : ''; ?></div>
+							<div class="fw-semibold"><?=get_field( 'card_subtitle_2', get_the_ID() ) ? esc_html( get_field( 'card_subtitle_2', get_the_ID() ) ) : ''; ?></div>
+								<?php
+							} else {
+								?>
+				  			<h3 class="latest-insights-slider__title"><?php the_title(); ?></h3>
+								<?php
+							}
+							?>
+						</a>
+			  		</div>
+			  				<?php
+						}
 						wp_reset_postdata();
 		  			}
 		  			?>
@@ -67,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerView: 1.25,
 		spaceBetween: 24, // adjust as needed
 		loop: true,
-		loopAdditionalSlides: 3,
+		loopAdditionalSlides: 6,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false,
