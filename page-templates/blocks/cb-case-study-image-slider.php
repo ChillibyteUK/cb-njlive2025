@@ -7,6 +7,12 @@
 
 defined( 'ABSPATH' ) || exit;
 
+
+$images = get_field( 'images' );
+if ( empty( $images ) ) {
+	return;
+}
+
 ?>
 <section class="case-study-image-slider py-5 has-slate-background-color">
 	<div class="container swiper case-study-image-slider__swiper">
