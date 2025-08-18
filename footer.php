@@ -24,9 +24,7 @@ if ( ! is_page( 'contact' ) ) {
             </div>
             <div class="col-lg-6 offset-lg-3 text-center">
 				<a href="/privacy-policy/" class="text-decoration-none">Privacy Policy</a> |
-				<a href="/terms-and-conditions/" class="text-decoration-none">Terms & Conditions</a> |
 				<a href="/cookie-policy/" class="text-decoration-none">Cookie Policy</a> |
-				<a href="/legal/" class="text-decoration-none">Legal</a>
             </div>
 			<div class="col-lg-3 text-center text-lg-end">
                 <a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
