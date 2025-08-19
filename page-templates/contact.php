@@ -26,17 +26,17 @@ $socials = get_field( 'social', 'option' );
 							?>
 							<li data-aos="fade-left" data-aos-delay="<?= esc_attr( $d ); ?>"><span class="fa-li"><i class="fa-brands fa-instagram fa-2x"></i></span> <a href="<?= esc_url( $socials['instagram_url'] ); ?>"><?= $socials['instagram_url']; ?></a></li>
 							<?php
-							$d += 50;
+							$d += 100;
 						}
 						if ( $socials['linkedin_url'] ) {
 							?>
 							<li data-aos="fade-left" data-aos-delay="<?= esc_attr( $d ); ?>"><span class="fa-li"><i class="fa-brands fa-linkedin fa-2x"></i></span> <a href="<?= esc_url( $socials['linkedin_url'] ); ?>"><?= $socials['linkedin_url']; ?></a></li>
 							<?php
-							$d += 50;
+							$d += 100;
 						}
 						?>
-						<li data-aos="fade-left" data-aos-delay="<?= esc_attr( $d + 100 ); ?>"><span class="fa-li"><i class="fa-solid fa-paper-plane fa-2x"></i></span> <a href="mailto:<?= antispambot( esc_html( get_field( 'contact_email', 'option' ) ) ); ?>"><?= esc_html( get_field( 'contact_email', 'option' ) ); ?></a></li>
-						<li data-aos="fade-left" data-aos-delay="<?= esc_attr( $d + 150 ); ?>"><span class="fa-li"><i class="fa-solid fa-phone fa-2x"></i></span> <a href="tel:<?= esc_html( parse_phone( get_field( 'contact_phone', 'option' ) ) ); ?>"><?= esc_html( get_field( 'contact_phone', 'option' ) ); ?></a></li>
+						<li data-aos="fade-left" data-aos-delay="<?= esc_attr( $d ); ?>"><span class="fa-li"><i class="fa-solid fa-paper-plane fa-2x"></i></span> <a href="mailto:<?= antispambot( esc_html( get_field( 'contact_email', 'option' ) ) ); ?>"><?= esc_html( get_field( 'contact_email', 'option' ) ); ?></a></li>
+						<li data-aos="fade-left" data-aos-delay="<?= esc_attr( $d + 100 ); ?>"><span class="fa-li"><i class="fa-solid fa-phone fa-2x"></i></span> <a href="tel:<?= esc_html( parse_phone( get_field( 'contact_phone', 'option' ) ) ); ?>"><?= esc_html( get_field( 'contact_phone', 'option' ) ); ?></a></li>
 					</ul>
 				</div>
 			</div>
