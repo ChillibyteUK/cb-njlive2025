@@ -33,7 +33,11 @@ defined( 'ABSPATH' ) || exit;
 		} else {
 			$vimeo_id = get_field( 'vimeo_id' );
 			if ( $vimeo_id ) {
-				$bg_image_url = get_vimeo_data_from_id( $vimeo_id, 'thumbnail_url' );
+				if ( get_field( 'video_poster' ) ) {
+					$bg_image_url = wp_get_attachment_image_url( get_field( 'video_poster' ), 'full' );
+				} else {
+					$bg_image_url = get_vimeo_data_from_id( $vimeo_id, 'thumbnail_url' );
+				}
 				?>
 		<img src="<?= esc_url( $bg_image_url ); ?>" alt="" class="cb-homepage-hero__image">
 		<div class="vimeo-container">
