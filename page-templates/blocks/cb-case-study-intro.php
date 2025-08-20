@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<section class="case-study-intro">
+<section class="case-study-intro has-gradient-background-color">
 	<?php
 	if ( function_exists( 'yoast_breadcrumb' ) ) {
 		echo '<div class="container">';

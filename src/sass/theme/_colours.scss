@@ -4,3 +4,9 @@
 .has-slate-background-color {
     background-color: var(--colour-slate) !important;
 }
+.has-gradient-background-color {
+    background: linear-gradient(90deg, var(--colour-green--mid) 30%, var(--colour-slate)) !important;
+}
+.has-white-color {
+    color: var(--colour-white) !important;
+}
