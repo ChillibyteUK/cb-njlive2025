@@ -9,6 +9,13 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 <section class="case-study-intro">
+	<?php
+	if ( function_exists( 'yoast_breadcrumb' ) ) {
+		echo '<div class="container">';
+		yoast_breadcrumb( '<p class="pb-3 mb-0" id="breadcrumbs">', '</p>' );
+		echo '</div>';
+	}
+	?>
 	<div class="container h-100">
 		<div class="row h-100 g-5">
 			<div class="col-md-5">
