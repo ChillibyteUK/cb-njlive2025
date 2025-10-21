@@ -22264,27 +22264,40 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
 .contact .row {
   height: calc(100vh - var(--h-top));
 }
-.contact li {
-  padding-block: 1.5rem;
+.contact .row.addresses {
+  height: auto;
+}
+.contact .row.addresses .fa-ul {
+  margin-left: 1.75rem;
+}
+.contact .row.addresses a {
+  margin-inline-start: 0;
+  transition: color var(--transition);
+}
+.contact .row.addresses a:hover {
+  color: var(--colour-green) !important;
+}
+.contact .fa-ul.contacts li {
+  padding-block: 1rem;
   font-size: var(--text-md);
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 @media (min-width: 992px) {
-  .contact li {
-    padding-block: 3rem;
+  .contact .fa-ul.contacts li {
+    padding-block: 2rem;
     font-size: var(--text-lg);
   }
 }
-.contact li a {
+.contact a {
   text-decoration: none;
   color: var(--colour-white);
   transition: color var(--transition);
   display: inline-block;
   margin-inline-start: 1rem;
 }
-.contact li a:hover {
+.contact a:hover {
   color: var(--colour-green);
 }
 

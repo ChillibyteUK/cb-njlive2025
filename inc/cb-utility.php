@@ -8,15 +8,21 @@
 /**
  * Parse and format phone number.
  *
+ * Optionally accepts a country code to replace a leading zero with.
+ *
  * @param string $phone The phone number to parse.
+ * @param string $code  The country code to prepend when number starts with 0. Default '+44'.
  * @return string The formatted phone number.
  */
-function parse_phone( $phone ) {
+function parse_phone( $phone, $code = '+44' ) {
     $phone = preg_replace( '/\s+/', '', $phone );
     $phone = preg_replace( '/\(0\)/', '', $phone );
     $phone = preg_replace( '/[\(\)\.]/', '', $phone );
     $phone = preg_replace( '/-/', '', $phone );
-    $phone = preg_replace( '/^0/', '+44', $phone );
+    // Replace leading 0 with provided code (default +44).
+    if ( preg_match( '/^0/', $phone ) ) {
+        $phone = preg_replace( '/^0/', $code, $phone );
+    }
     return $phone;
 }
 
@@ -76,14 +82,14 @@ function social_icon_shortcode( $atts ) {
     }
 
     $social = get_field( 'socials', 'option' );
-	$urls   = array(
-        'facebook'    => $social['facebook_url'] ?? '',
-        'instagram'   => $social['instagram_url'] ?? '',
-        'x-twitter'   => $social['twitter_url'] ?? '',
-        'pinterest'   => $social['pinterest_url'] ?? '',
-        'youtube'     => $social['youtube_url'] ?? '',
-        'linkedin'    => $social['linkedin_url'] ?? '',
-	);
+    $urls   = array(
+        'facebook'  => $social['facebook_url'] ?? '',
+        'instagram' => $social['instagram_url'] ?? '',
+        'x-twitter' => $social['twitter_url'] ?? '',
+        'pinterest' => $social['pinterest_url'] ?? '',
+        'youtube'   => $social['youtube_url'] ?? '',
+        'linkedin'  => $social['linkedin_url'] ?? '',
+    );
 
     if ( ! isset( $urls[ $atts['type'] ] ) || empty( $urls[ $atts['type'] ] ) ) {
         return '';
@@ -151,7 +157,7 @@ add_shortcode(
  * Grab the specified data like Thumbnail URL of a publicly embeddable video hosted on Vimeo.
  *
  * @param  str $video_id The ID of a Vimeo video.
- * @param  str $data      Video data to be fetched - probably want thumbnail_url or thumbnail_url_with_play_button
+ * @param  str $data      Video data to be fetched - probably want thumbnail_url or thumbnail_url_with_play_button.
  * @return str            The specified data
  */
 function get_vimeo_data_from_id( $video_id, $data ) {

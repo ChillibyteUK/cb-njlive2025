@@ -9,26 +9,41 @@
     .row {
         height: calc( 100vh - var(--h-top));
     }
-    li {
-        padding-block: 1.5rem;
-        font-size: var(--text-md);
-        @media (min-width:992px) {
-            padding-block: 3rem;
-            font-size: var(--text-lg);
+    .row.addresses {
+        height: auto;
+        .fa-ul {
+            margin-left: 1.75rem;
         }
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-
         a {
-            text-decoration: none;
-            color: var(--colour-white);
+            margin-inline-start: 0;
             transition: color var(--transition);
-            display: inline-block;
-            margin-inline-start: 1rem;
             &:hover {
-                color: var(--colour-green);
+                color: var(--colour-green) !important;
             }
+        }
+    }
+    .fa-ul.contacts {
+        li {
+            padding-block: 1rem;
+            font-size: var(--text-md);
+            @media (min-width:992px) {
+                padding-block: 2rem;
+                font-size: var(--text-lg);
+            }
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--colour-white);
+        transition: color var(--transition);
+        display: inline-block;
+        margin-inline-start: 1rem;
+        &:hover {
+            color: var(--colour-green);
         }
     }
 }
