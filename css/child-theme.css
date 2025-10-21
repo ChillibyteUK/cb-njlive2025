@@ -21777,6 +21777,10 @@ body {
   color: var(--colour-white) !important;
 }
 
+.has-njgreen-color {
+  color: var(--colour-green) !important;
+}
+
 .filter-buttons {
   display: flex;
   justify-content: center;

@@ -39,7 +39,7 @@ $socials = get_field( 'social', 'option' );
 					</ul>
 					<div class="row addresses g-5">
 						<div class="col-md-6" data-aos="fade-up">
-							<h2 class="h4 has-green-color">NJLive London</h2>
+							<h2 class="h4 has-njgreen-color">NJLive London</h2>
 							<ul class="fa-ul">
 								<li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span> <?= wp_kses_post( get_field( 'contact_address_uk', 'option' ) ); ?></li>
 								<li class="mt-2">
@@ -49,7 +49,7 @@ $socials = get_field( 'social', 'option' );
 							</ul>
 						</div>
 						<div class="col-md-6" data-aos="fade-up">
-							<h2 class="h4 has-green-color">NJLive USA, East Coast</h2>
+							<h2 class="h4 has-njgreen-color">NJLive USA, East Coast</h2>
 							<ul class="fa-ul">
 								<li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>
 								<?= wp_kses_post( get_field( 'contact_address_ny', 'option' ) ); ?>
@@ -67,7 +67,7 @@ $socials = get_field( 'social', 'option' );
 							</ul>
 						</div>
 						<div class="col-md-6" data-aos="fade-up">
-							<h2 class="h4 has-green-color">NJLive USA, West Coast</h2>
+							<h2 class="h4 has-njgreen-color">NJLive USA, West Coast</h2>
 							<ul class="fa-ul">
 								<li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>
 								<?= wp_kses_post( get_field( 'contact_address_ca', 'option' ) ); ?>
@@ -85,7 +85,7 @@ $socials = get_field( 'social', 'option' );
 							</ul>
 						</div>
 						<div class="col-md-6" data-aos="fade-up">
-							<h2 class="h4 has-green-color">NJLive USA, North West</h2>
+							<h2 class="h4 has-njgreen-color">NJLive USA, North West</h2>
 							<ul class="fa-ul">
 								<li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>
 								<?= wp_kses_post( get_field( 'contact_address_wa', 'option' ) ); ?>
