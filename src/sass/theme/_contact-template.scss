@@ -1,13 +1,21 @@
 .contact {
     background-color: var(--colour-slate);
     color: var(--colour-white);
+    height: 100%;
     min-height: calc( 100vh - var(--h-top));
+    .intro-text {
+        margin-block: auto;
+        @media (min-width: 768px) {
+            margin-block-start: 8rem;
+        }
+    }
     h1 {
         font-size: var(--text-5xl);
         font-weight: var(--font-weight-black);
+        padding-bottom: 3rem;
     }
     .row {
-        height: calc( 100vh - var(--h-top));
+        min-height: calc( 100vh - var(--h-top));
     }
     .row.addresses {
         height: auto;

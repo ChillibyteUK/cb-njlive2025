@@ -15,7 +15,7 @@ $socials = get_field( 'social', 'option' );
 	<section class="contact-list pb-5">
 		<div class="container pb-5">
 			<div class="row">
-				<div class="col-lg-6 py-lg-5 my-auto">
+				<div class="col-lg-6 py-lg-5 intro-text">
 					<h1 data-aos="fade">Let's get started</h1>
 				</div>
 				<div class="col-lg-6 pb-4 py-lg-5 my-auto">
@@ -113,7 +113,7 @@ $socials = get_field( 'social', 'option' );
 								?>
 								<li class="mt-2">
 									<span class="fa-li"><i class="fa-solid fa-phone"></i></span>
-									<a class="has-white-color" href="tel:<?= esc_html( parse_phone( get_field( 'contact_phone_ad', 'option' ), '+1' ) ); ?>"><?= esc_html( get_field( 'contact_phone_ae', 'option' ) ); ?></a>
+									<a class="has-white-color" href="tel:<?= esc_html( parse_phone( get_field( 'contact_phone_ad', 'option' ), '+1' ) ); ?>"><?= esc_html( get_field( 'contact_phone_ad', 'option' ) ); ?></a>
 								</li>
 								<?php
 							}
