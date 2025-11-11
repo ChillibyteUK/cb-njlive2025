@@ -102,6 +102,60 @@ $socials = get_field( 'social', 'option' );
 							?>
 							</ul>
 						</div>
+						<div class="col-md-6" data-aos="fade-up">
+							<h2 class="h4 has-njgreen-color">NJLive Middle East, Abu Dhabi</h2>
+							<ul class="fa-ul">
+								<li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>
+								<?= wp_kses_post( get_field( 'contact_address_ad', 'option' ) ); ?>
+								</li>
+							<?php
+							if ( get_field( 'contact_phone_ad', 'option' ) ) {
+								?>
+								<li class="mt-2">
+									<span class="fa-li"><i class="fa-solid fa-phone"></i></span>
+									<a class="has-white-color" href="tel:<?= esc_html( parse_phone( get_field( 'contact_phone_ad', 'option' ), '+1' ) ); ?>"><?= esc_html( get_field( 'contact_phone_ae', 'option' ) ); ?></a>
+								</li>
+								<?php
+							}
+							?>
+							</ul>
+						</div>
+						<div class="col-md-6" data-aos="fade-up">
+							<h2 class="h4 has-njgreen-color">NJLive Middle East, Dubai</h2>
+							<ul class="fa-ul">
+								<li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>
+								<?= wp_kses_post( get_field( 'contact_address_ae', 'option' ) ); ?>
+								</li>
+							<?php
+							if ( get_field( 'contact_phone_ae', 'option' ) ) {
+								?>
+								<li class="mt-2">
+									<span class="fa-li"><i class="fa-solid fa-phone"></i></span>
+									<a class="has-white-color" href="tel:<?= esc_html( parse_phone( get_field( 'contact_phone_ae', 'option' ), '+1' ) ); ?>"><?= esc_html( get_field( 'contact_phone_ae', 'option' ) ); ?></a>
+								</li>
+								<?php
+							}
+							?>
+							</ul>
+						</div>
+						<div class="col-md-6" data-aos="fade-up">
+							<h2 class="h4 has-njgreen-color">NJLive Middle East, Riyadh</h2>
+							<ul class="fa-ul">
+								<li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>
+								<?= wp_kses_post( get_field( 'contact_address_sa', 'option' ) ); ?>
+								</li>
+							<?php
+							if ( get_field( 'contact_phone_sa', 'option' ) ) {
+								?>
+								<li class="mt-2">
+									<span class="fa-li"><i class="fa-solid fa-phone"></i></span>
+									<a class="has-white-color" href="tel:<?= esc_html( parse_phone( get_field( 'contact_phone_sa', 'option' ), '+1' ) ); ?>"><?= esc_html( get_field( 'contact_phone_sa', 'option' ) ); ?></a>
+								</li>
+								<?php
+							}
+							?>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
