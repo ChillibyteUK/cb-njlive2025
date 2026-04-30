@@ -229,7 +229,9 @@
   }
   &__image {
     border-radius: var(--border-radius-sm);
+    aspect-ratio: 2.35 / 1;
     overflow: hidden;
+    object-fit: cover;
   }
   h1 {
     font-size: var(--text-3xl);

@@ -22104,7 +22104,10 @@ body[class*=post-type-archive-] header .current_page_parent > .nav-link::after {
 }
 .single-blog__image {
   border-radius: var(--border-radius-sm);
+  aspect-ratio: 2.35/1;
   overflow: hidden;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .single-blog h1, .single-blog .h1 {
   font-size: var(--text-3xl);

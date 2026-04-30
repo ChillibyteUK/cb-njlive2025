@@ -13,17 +13,17 @@ get_header();
 		<?php
 		$post_cat = get_the_category();
 		?>
-		<div class="single-blog__category">
+		<!-- <div class="single-blog__category">
 			<?= esc_html( $post_cat[0]->name ); ?>
-		</div>
+		</div> -->
 		<div class="row">
-			<div class="col-lg-7 order-lg-2 my-auto">
+			<div class="col-lg-12 my-auto">
+				<h1><?= esc_html( get_the_title() ); ?></h1>
 				<div class="post_hero mb-4">
 					<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'single-blog__image' ) ); ?>
 				</div>
 			</div>
-			<div class="col-lg-5 order-lg-1 my-auto">
-		        <h1><?= esc_html( get_the_title() ); ?></h1>
+			<div class="col-lg-12 my-auto">
 				<div class="single-content">
 					<?php
 					echo wp_kses_post( get_the_content() );
