@@ -40,7 +40,7 @@ get_header();
 										<?php endif; ?>
 									</div>
 									<div class="post-card__body">
-										<p class="post-card__meta"><?= esc_html( get_the_date() ); ?></p>
+										<!-- <p class="post-card__meta"><?= esc_html( get_the_date() ); ?></p> -->
 										<h2 class="post-card__title"><?= esc_html( get_the_title() ); ?></h2>
 										<div class="post-card__excerpt"><?php the_excerpt(); ?></div>
 									</div>
