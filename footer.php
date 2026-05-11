@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * Footer template for the CB TXP theme.
  *
@@ -20,7 +20,7 @@ if ( ! is_page( 'contact' ) ) {
     <div class="container py-4">
         <div class="row g-3">
             <div class="col-12 text-center">
-				&copy; <?= esc_html( gmdate( 'Y' ) ); ?> NJ Live is part of the Human Network Group of companies, legally trading as NJ Live Ltd, a company registered in England and Wales Company Number 04786124.
+				&copy; <?= esc_html( gmdate( 'Y' ) ); ?> NJ Live is part of Identity Events Management Ltd, legally trading as NJ Live Ltd, a company registered in England and Wales Company Number 04786124.
             </div>
             <div class="col-lg-6 offset-lg-3 text-center">
 				<a href="/privacy-policy/" class="text-decoration-none">Privacy Policy</a> |
